@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AA Fitness Center — Karachi's Premier Gym | 3 Branches</title>
+<meta name="description" content="AA Fitness Center — Karachi's most advanced fitness club. 3 branches across Karachi. Ladies section, certified trainers, imported equipment."/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23e8150a'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial Black,sans-serif' font-size='28' font-weight='900' fill='white'>AA</text></svg>"/>
+<style>
+/* ═══════════════════════════════════════
+   THEME VARIABLES
+═══════════════════════════════════════ */
+[data-theme="dark"]{
+  --bg:        #080808;
+  --bg2:       #0f0f0f;
+  --bg3:       #161616;
+  --bg4:       #1e1e1e;
+  --bg5:       #252525;
+  --card:      #111111;
+  --nav-bg:    rgba(8,8,8,.96);
+  --text:      #f2f2f2;
+  --text2:     #aaaaaa;
+  --text3:     #606060;
+  --text4:     #3a3a3a;
+  --border:    #1e1e1e;
+  --border2:   #2c2c2c;
+  --border3:   #383838;
+  --shadow:    rgba(0,0,0,.6);
+}
+[data-theme="light"]{
+  --bg:        #f5f5f5;
+  --bg2:       #efefef;
+  --bg3:       #e8e8e8;
+  --bg4:       #dcdcdc;
+  --bg5:       #d0d0d0;
+  --card:      #ffffff;
+  --nav-bg:    rgba(245,245,245,.96);
+  --text:      #111111;
+  --text2:     #444444;
+  --text3:     #888888;
+  --text4:     #bbbbbb;
+  --border:    #dedede;
+  --border2:   #cccccc;
+  --border3:   #bbbbbb;
+  --shadow:    rgba(0,0,0,.12);
+}
+[data-theme="midnight"]{
+  --bg:        #03020a;
+  --bg2:       #09081a;
+  --bg3:       #100e22;
+  --bg4:       #18162e;
+  --bg5:       #201d38;
+  --card:      #0d0b1e;
+  --nav-bg:    rgba(3,2,10,.97);
+  --text:      #e8e4ff;
+  --text2:     #8b84b8;
+  --text3:     #4e4870;
+  --text4:     #2a2550;
+  --border:    #1a1730;
+  --border2:   #252240;
+  --border3:   #332f58;
+  --shadow:    rgba(0,0,0,.8);
+}
+
+/* ═══════════════════════════════════════
+   ACCENT (always red)
+═══════════════════════════════════════ */
+:root{
+  --red:       #e8150a;
+  --red-h:     #ff2216;
+  --red-d:     #bf1008;
+  --red-glow:  rgba(232,21,10,.22);
+  --red-soft:  rgba(232,21,10,.10);
+  --red-softer:rgba(232,21,10,.06);
+}
+
+/* ═══════════════════════════════════════
+   BASE
+═══════════════════════════════════════ */
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.65;transition:background .35s,color .35s;}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+.wrap{max-width:1160px;margin:0 auto;padding:0 1.5rem;}
+
+/* ═══════════════════════════════════════
+   NAVBAR
+═══════════════════════════════════════ */
+nav{
+  position:sticky;top:0;z-index:500;
+  background:var(--nav-bg);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(28px);
+  -webkit-backdrop-filter:blur(28px);
+  transition:background .35s,border-color .35s;
+}
+.nav-inner{max-width:1160px;margin:0 auto;padding:0 1.5rem;height:70px;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+/* Logo */
+.nav-logo{display:flex;align-items:center;gap:11px;flex-shrink:0;cursor:pointer;}
+.logo-icon{
+  width:44px;height:44px;
+  background:var(--red);
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  position:relative;
+  box-shadow:0 4px 16px var(--red-glow);
+  overflow:hidden;
+}
+.logo-icon::before{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,.18) 0%,transparent 60%);
+}
+.logo-icon span{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;color:#fff;letter-spacing:.04em;position:relative;z-index:1;}
+.logo-text .brand{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.08em;color:var(--text);line-height:1;transition:color .35s;}
+.logo-text .tagline{font-size:.58rem;color:var(--text3);letter-spacing:.15em;text-transform:uppercase;margin-top:2px;transition:color .35s;}
+/* Nav links */
+.nav-links{display:flex;align-items:center;gap:.1rem;}
+.nav-links a{font-size:.83rem;color:var(--text2);padding:.48rem .9rem;border-radius:8px;transition:color .15s,background .15s;white-space:nowrap;font-weight:500;}
+.nav-links a:hover{color:var(--text);background:var(--bg4);}
+.nav-cta{background:var(--red)!important;color:#fff!important;font-weight:700!important;box-shadow:0 2px 12px var(--red-glow);}
+.nav-cta:hover{background:var(--red-h)!important;transform:translateY(-1px);}
+/* Hamburger */
+.hmbg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:.45rem;border-radius:8px;}
+.hmbg span{display:block;width:22px;height:2px;background:var(--text2);border-radius:2px;transition:.28s;}
+.hmbg.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hmbg.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.hmbg.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* ═══════════════════════════════════════
+   MOBILE MENU
+═══════════════════════════════════════ */
+.mob-menu{display:none;position:fixed;top:70px;left:0;right:0;bottom:0;z-index:490;background:var(--bg);overflow-y:auto;transition:background .35s;}
+.mob-menu.open{display:block;}
+.mob-inner{padding:1rem 1.5rem 5rem;}
+.mob-inner a{display:flex;align-items:center;gap:.8rem;padding:1rem 1.2rem;font-size:1rem;font-weight:500;color:var(--text2);border-radius:11px;margin-bottom:.3rem;transition:color .15s,background .15s;}
+.mob-inner a i{font-size:1.1rem;color:var(--red);flex-shrink:0;}
+.mob-inner a:hover{color:var(--text);background:var(--bg3);}
+.mob-cta-link{background:var(--red)!important;color:#fff!important;font-weight:700!important;justify-content:center!important;margin-top:.75rem;border-radius:12px!important;}
+.mob-divider{border:none;border-top:1px solid var(--border);margin:.9rem 0;}
+
+/* ═══════════════════════════════════════
+   HERO
+═══════════════════════════════════════ */
+.hero{
+  min-height:100svh;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  padding:6rem 1.5rem 4rem;
+  position:relative;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1600&q=85&auto=format&fit=crop') center/cover no-repeat;
+  z-index:0;
+  transition:opacity .35s;
+}
+[data-theme="light"] .hero-bg{opacity:.18;}
+[data-theme="dark"]  .hero-bg{opacity:1;}
+[data-theme="midnight"] .hero-bg{opacity:.85;}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(160deg,var(--bg) 0%,rgba(8,8,8,.55) 40%,var(--bg) 100%);
+  z-index:1;
+  transition:background .35s;
+}
+[data-theme="light"] .hero-overlay{background:linear-gradient(160deg,rgba(245,245,245,.95) 0%,rgba(245,245,245,.7) 40%,rgba(245,245,245,.97) 100%);}
+[data-theme="midnight"] .hero-overlay{background:linear-gradient(160deg,rgba(3,2,10,.95) 0%,rgba(3,2,10,.6) 40%,rgba(3,2,10,.97) 100%);}
+.hero-accent-line{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--red),transparent);z-index:3;}
+.hero-content{position:relative;z-index:2;max-width:860px;width:100%;}
+/* Animated background particles */
+.hero-particles{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none;}
+.particle{position:absolute;width:2px;height:2px;background:var(--red);border-radius:50%;opacity:.4;animation:float-up linear infinite;}
+@keyframes float-up{0%{transform:translateY(100vh) scale(0);opacity:0;}10%{opacity:.4;}90%{opacity:.4;}100%{transform:translateY(-10vh) scale(1.5);opacity:0;}}
+.hero-pill{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--red-soft);
+  border:1px solid rgba(232,21,10,.45);
+  color:var(--red);
+  font-size:.72rem;padding:.42rem 1.1rem;border-radius:24px;
+  margin-bottom:1.75rem;
+  letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+  animation:fadeInDown .6s ease both;
+}
+.hero h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(3.8rem,12vw,9rem);
+  line-height:.88;letter-spacing:.04em;text-transform:uppercase;
+  margin-bottom:1.35rem;
+  animation:fadeInUp .7s .15s ease both;
+}
+.hero h1 .accent{color:var(--red);}
+.hero h1 .ghost{-webkit-text-stroke:2px var(--text);color:transparent;transition:-webkit-text-stroke-color .35s;}
+.hero-sub{
+  font-size:1.08rem;color:var(--text2);
+  max-width:500px;margin:0 auto 2.25rem;
+  line-height:1.8;font-weight:400;
+  animation:fadeInUp .7s .25s ease both;
+  transition:color .35s;
+}
+.hero-btns{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.75rem;animation:fadeInUp .7s .35s ease both;}
+.btn-red{
+  background:var(--red);color:#fff;font-weight:700;
+  padding:.95rem 2rem;border-radius:10px;font-size:.96rem;
+  display:inline-flex;align-items:center;gap:.5rem;
+  transition:background .15s,transform .15s,box-shadow .15s;
+  min-height:52px;font-family:'Inter',sans-serif;border:none;cursor:pointer;
+  box-shadow:0 4px 20px var(--red-glow);
+}
+.btn-red:hover{background:var(--red-h);transform:translateY(-3px);box-shadow:0 8px 28px var(--red-glow);}
+.btn-ghost{
+  border:1.5px solid var(--border3);
+  color:var(--text);
+  padding:.95rem 2rem;border-radius:10px;font-size:.96rem;
+  display:inline-flex;align-items:center;gap:.5rem;
+  transition:border-color .15s,color .15s,transform .15s,background .15s;
+  min-height:52px;font-weight:600;
+  background:rgba(255,255,255,.04);
+}
+.btn-ghost:hover{border-color:var(--red);color:var(--red);transform:translateY(-3px);background:var(--red-softer);}
+[data-theme="light"] .btn-ghost{background:rgba(0,0,0,.04);}
+.hero-badges{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;animation:fadeInUp .7s .45s ease both;}
+.hbadge{
+  display:inline-flex;align-items:center;gap:.32rem;
+  background:var(--bg3);
+  border:1px solid var(--border2);
+  color:var(--text2);font-size:.73rem;
+  padding:.36rem .82rem;border-radius:20px;font-weight:500;
+  transition:background .35s,border-color .35s,color .35s;
+}
+.hbadge i{color:var(--red);font-size:.78rem;}
+
+/* ═══════════════════════════════════════
+   STATS BAR
+═══════════════════════════════════════ */
+.stats-bar{background:var(--red);padding:1.2rem 1.5rem;position:relative;overflow:hidden;}
+.stats-bar::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);animation:shimmer 3s infinite;}
+@keyframes shimmer{0%{transform:translateX(-100%);}100%{transform:translateX(100%);}}
+.stats-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;text-align:center;}
+.sb-num{font-family:'Bebas Neue',sans-serif;font-size:2.1rem;color:#fff;line-height:1;letter-spacing:.03em;}
+.sb-lbl{font-size:.64rem;color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:.1em;margin-top:.2rem;font-weight:600;}
+
+/* ═══════════════════════════════════════
+   MARQUEE
+═══════════════════════════════════════ */
+.marquee-wrap{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:.8rem 0;overflow:hidden;transition:background .35s,border-color .35s;}
+.marquee-track{display:flex;gap:0;white-space:nowrap;animation:marquee 32s linear infinite;}
+.marquee-item{display:inline-flex;align-items:center;gap:.6rem;font-size:.76rem;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.1em;padding:0 1.6rem;transition:color .35s;}
+.m-dot{color:var(--red);font-size:.55rem;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* ═══════════════════════════════════════
+   SECTION COMMONS
+═══════════════════════════════════════ */
+section{padding:5.5rem 0;}
+.sec-eye{font-size:.7rem;color:var(--red);text-transform:uppercase;letter-spacing:.22em;font-weight:800;margin-bottom:.65rem;}
+.sec-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:.04em;text-transform:uppercase;line-height:1.02;margin-bottom:.85rem;color:var(--text);transition:color .35s;}
+.sec-h em{font-style:normal;color:var(--red);}
+.sec-rule{width:40px;height:3px;background:var(--red);margin:1rem 0 2.5rem;border-radius:2px;}
+.sec-p{color:var(--text2);font-size:.97rem;line-height:1.78;max-width:540px;transition:color .35s;}
+
+/* ═══════════════════════════════════════
+   ABOUT
+═══════════════════════════════════════ */
+.about-sec{background:var(--bg);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.about-imgs{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:195px 195px;gap:.85rem;}
+.aimg{border-radius:14px;overflow:hidden;border:1px solid var(--border);transition:border-color .35s;}
+.aimg img{width:100%;height:100%;object-fit:cover;transition:transform .45s;}
+.aimg:hover img{transform:scale(1.06);}
+.aimg.tall{grid-row:span 2;}
+.about-body p{font-size:.96rem;color:var(--text2);line-height:1.82;margin-bottom:.9rem;transition:color .35s;}
+.feat-list{display:flex;flex-direction:column;gap:.6rem;margin-top:1.35rem;}
+.feat-item{display:flex;align-items:center;gap:.72rem;font-size:.9rem;color:var(--text2);transition:color .35s;}
+.feat-item i{color:var(--red);font-size:.95rem;flex-shrink:0;}
+.red-callout{
+  background:var(--red-softer);
+  border-left:3px solid var(--red);
+  padding:1.1rem 1.3rem;
+  border-radius:0 12px 12px 0;
+  margin-top:1.75rem;
+  transition:background .35s;
+}
+.red-callout p{font-size:.9rem;color:var(--text);line-height:1.72;font-weight:500;transition:color .35s;}
+
+/* ═══════════════════════════════════════
+   BRANCHES
+═══════════════════════════════════════ */
+.branches-sec{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);transition:background .35s,border-color .35s;}
+.branches-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.35rem;margin-top:2.5rem;}
+.branch-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;
+  transition:border-color .22s,transform .22s,box-shadow .22s,background .35s;
+  display:flex;flex-direction:column;
+}
+.branch-card:hover{border-color:var(--red);transform:translateY(-6px);box-shadow:0 12px 40px rgba(232,21,10,.15);}
+.branch-card.star{border-color:var(--red);box-shadow:0 0 0 1px var(--red-soft);}
+.branch-head{
+  background:var(--bg3);
+  padding:1.3rem 1.4rem;
+  border-bottom:1px solid var(--border);
+  position:relative;
+  transition:background .35s,border-color .35s;
+}
+.branch-head.featured{background:var(--red-softer);}
+.branch-badge{
+  position:absolute;top:.9rem;right:.9rem;
+  background:var(--red);color:#fff;
+  font-size:.6rem;font-weight:800;
+  padding:.22rem .65rem;border-radius:12px;
+  letter-spacing:.07em;text-transform:uppercase;
+}
+.branch-num{font-size:.65rem;color:var(--red);letter-spacing:.18em;font-weight:800;text-transform:uppercase;margin-bottom:.3rem;}
+.branch-name{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--text);transition:color .35s;}
+.branch-body{padding:1.25rem 1.4rem;display:flex;flex-direction:column;gap:.7rem;flex:1;}
+.b-row{display:flex;align-items:flex-start;gap:.7rem;font-size:.83rem;color:var(--text2);transition:color .35s;}
+.b-row i{color:var(--red);font-size:.95rem;flex-shrink:0;margin-top:.15rem;}
+.b-stars{display:flex;align-items:center;gap:.5rem;margin-top:.15rem;}
+.stars-ico{color:var(--red);font-size:.82rem;letter-spacing:.03rem;}
+.star-num{font-size:.88rem;font-weight:800;color:var(--text);transition:color .35s;}
+.star-count{font-size:.73rem;color:var(--text3);transition:color .35s;}
+.branch-cta{display:flex;gap:.65rem;padding:1.1rem 1.4rem;border-top:1px solid var(--border);transition:border-color .35s;}
+.bbtn{
+  flex:1;padding:.72rem;border-radius:9px;
+  font-size:.8rem;font-weight:700;
+  text-align:center;
+  transition:background .15s,border-color .15s,color .15s,transform .15s;
+  display:flex;align-items:center;justify-content:center;gap:.4rem;
+  font-family:'Inter',sans-serif;cursor:pointer;
+}
+.bbtn-red{background:var(--red);color:#fff;border:none;box-shadow:0 2px 10px var(--red-soft);}
+.bbtn-red:hover{background:var(--red-h);transform:translateY(-1px);}
+.bbtn-out{border:1.5px solid var(--border2);color:var(--text2);background:none;transition:border-color .15s,color .15s,background .35s;}
+.bbtn-out:hover{border-color:var(--red);color:var(--red);}
+
+/* ═══════════════════════════════════════
+   LADIES
+═══════════════════════════════════════ */
+.ladies-sec{background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);transition:background .35s,border-color .35s;}
+.ladies-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;}
+.ladies-img{border-radius:16px;overflow:hidden;height:420px;border:1px solid var(--border);transition:border-color .35s;}
+.ladies-img img{width:100%;height:100%;object-fit:cover;}
+.lf-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.5rem;}
+.lf-card{
+  background:var(--bg4);
+  border:1px solid var(--border2);
+  border-radius:12px;padding:1.1rem;
+  display:flex;align-items:flex-start;gap:.72rem;
+  transition:border-color .2s,background .35s;
+}
+.lf-card:hover{border-color:var(--red);}
+.lf-card i{font-size:1.15rem;color:var(--red);flex-shrink:0;margin-top:.1rem;}
+.lf-card h4{font-size:.86rem;font-weight:700;margin-bottom:.22rem;color:var(--text);transition:color .35s;}
+.lf-card p{font-size:.76rem;color:var(--text2);line-height:1.55;transition:color .35s;}
+
+/* ═══════════════════════════════════════
+   TIMINGS
+═══════════════════════════════════════ */
+.timings-sec{background:var(--bg);}
+.timings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.25rem;}
+.timing-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:15px;overflow:hidden;
+  transition:border-color .22s,background .35s;
+}
+.timing-card:hover{border-color:var(--red);}
+.timing-head{
+  background:var(--bg3);
+  padding:1.05rem 1.3rem;
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:.7rem;
+  transition:background .35s,border-color .35s;
+}
+.timing-head i{font-size:1.15rem;color:var(--red);}
+.timing-head h3{font-size:.92rem;font-weight:700;color:var(--text);transition:color .35s;}
+.timing-slots{padding:1.05rem 1.3rem;display:flex;flex-direction:column;gap:.52rem;}
+.tslot{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.55rem .82rem;
+  background:var(--bg3);border-radius:8px;
+  transition:background .35s;
+}
+.tslot .type{font-size:.75rem;color:var(--text2);transition:color .35s;}
+.tslot .time{font-size:.82rem;font-weight:700;color:var(--text);transition:color .35s;}
+.tslot.ladies-slot{background:var(--red-softer);}
+.tslot.ladies-slot .time{color:var(--red);}
+.timing-note{font-size:.73rem;color:var(--text3);padding:.45rem 1.3rem .9rem;font-style:italic;transition:color .35s;}
+
+/* ═══════════════════════════════════════
+   SERVICES
+═══════════════════════════════════════ */
+.services-sec{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);transition:background .35s,border-color .35s;}
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:1rem;}
+.srv-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;padding:1.5rem;
+  transition:border-color .22s,transform .22s,background .22s;
+}
+.srv-card:hover{border-color:var(--red);transform:translateY(-5px);background:var(--bg3);}
+.srv-ic{
+  width:48px;height:48px;
+  background:var(--bg3);
+  border:1px solid var(--border2);
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.25rem;color:var(--red);
+  margin-bottom:1rem;
+  transition:border-color .22s,background .35s;
+}
+.srv-card:hover .srv-ic{border-color:var(--red);background:var(--red-softer);}
+.srv-card h3{font-size:.92rem;font-weight:700;margin-bottom:.42rem;color:var(--text);transition:color .35s;}
+.srv-card p{font-size:.8rem;color:var(--text2);line-height:1.62;transition:color .35s;}
+
+/* ═══════════════════════════════════════
+   MEMBERSHIP
+═══════════════════════════════════════ */
+.membership-sec{background:var(--bg);}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem;margin-top:2.5rem;}
+.price-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;padding:1.75rem;
+  transition:border-color .22s,transform .22s,background .35s;
+  position:relative;
+  display:flex;flex-direction:column;
+}
+.price-card:hover{transform:translateY(-5px);}
+.price-card.hot{border-color:var(--red);box-shadow:0 0 0 1px var(--red-soft);}
+.price-card.hot::before{
+  content:'Most Popular';
+  position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  background:var(--red);color:#fff;
+  font-size:.61rem;font-weight:800;
+  padding:.22rem .9rem;
+  border-radius:0 0 10px 10px;
+  letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;
+}
+.price-name{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.2rem;margin-top:.35rem;color:var(--text);transition:color .35s;}
+.price-amt{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--red);line-height:1;margin:.5rem 0 .25rem;letter-spacing:.02em;}
+.price-amt span{font-family:'Inter',sans-serif;font-size:.76rem;color:var(--text2);font-weight:400;transition:color .35s;}
+.price-desc{font-size:.81rem;color:var(--text2);margin-bottom:1.25rem;line-height:1.58;flex:1;transition:color .35s;}
+.price-feats{list-style:none;display:flex;flex-direction:column;gap:.52rem;margin-bottom:1.6rem;}
+.price-feats li{font-size:.83rem;color:var(--text2);display:flex;align-items:center;gap:.45rem;transition:color .35s;}
+.price-feats li i{color:var(--red);font-size:.85rem;flex-shrink:0;}
+.pbtn{
+  width:100%;padding:.88rem;border-radius:10px;
+  font-size:.89rem;font-weight:700;cursor:pointer;
+  font-family:'Inter',sans-serif;
+  transition:background .15s,transform .15s,border-color .15s,color .15s;
+  display:block;text-align:center;min-height:50px;
+}
+.pbtn:hover{transform:translateY(-1px);}
+.pbtn-fill{background:var(--red);color:#fff;border:none;box-shadow:0 3px 14px var(--red-soft);}
+.pbtn-fill:hover{background:var(--red-h);}
+.pbtn-out{background:none;border:1.5px solid var(--border2);color:var(--text);transition:border-color .15s,color .15s,background .35s;}
+.pbtn-out:hover{border-color:var(--red);color:var(--red);}
+.reg-note{text-align:center;margin-top:1.9rem;padding:1.1rem 1.3rem;background:var(--bg2);border:1px solid var(--border);border-radius:12px;transition:background .35s,border-color .35s;}
+.reg-note p{font-size:.87rem;color:var(--text2);transition:color .35s;}
+.reg-note strong{color:var(--red);}
+
+/* ═══════════════════════════════════════
+   CLASSES
+═══════════════════════════════════════ */
+.classes-sec{background:var(--bg2);border-top:1px solid var(--border);transition:background .35s,border-color .35s;}
+.classes-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2rem;}
+.class-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;overflow:hidden;
+  transition:border-color .22s,transform .22s,background .35s;
+}
+.class-card:hover{border-color:var(--red);transform:translateY(-4px);}
+.class-head{
+  background:var(--bg3);
+  padding:1.05rem 1.3rem;
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:.72rem;
+  transition:background .35s,border-color .35s;
+}
+.class-head.l{background:var(--red-softer);}
+.class-head i{font-size:1.15rem;color:var(--red);}
+.class-head h3{font-size:.94rem;font-weight:700;color:var(--text);transition:color .35s;}
+.class-slots{padding:1.05rem 1.3rem;display:flex;flex-direction:column;gap:.52rem;}
+.cslot{
+  display:flex;align-items:center;gap:.7rem;
+  padding:.65rem .88rem;
+  background:var(--bg3);border-radius:8px;
+  transition:background .35s;
+}
+.cslot i{font-size:.95rem;color:var(--red);flex-shrink:0;}
+.cslot span{font-size:.84rem;font-weight:600;color:var(--text);transition:color .35s;}
+.class-note{font-size:.73rem;color:var(--text3);padding:.45rem 1.3rem .9rem;font-style:italic;transition:color .35s;}
+
+/* ═══════════════════════════════════════
+   REVIEWS
+═══════════════════════════════════════ */
+.reviews-sec{background:var(--bg);border-top:1px solid var(--border);transition:background .35s,border-color .35s;}
+.reviews-header{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;margin-bottom:2.5rem;}
+.overall-rating{display:flex;align-items:center;gap:1.5rem;}
+.or-num{font-family:'Bebas Neue',sans-serif;font-size:4.5rem;color:var(--red);line-height:1;letter-spacing:.02em;}
+.or-right .or-stars{color:var(--red);font-size:1.4rem;letter-spacing:.08rem;}
+.or-right .or-label{font-size:.82rem;color:var(--text2);margin-top:.3rem;transition:color .35s;}
+.or-right .or-branches{font-size:.75rem;color:var(--text3);margin-top:.15rem;transition:color .35s;}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem;}
+.rev-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:15px;
+  padding:1.5rem;
+  transition:border-color .22s,transform .22s,background .35s;
+  position:relative;
+  overflow:hidden;
+}
+.rev-card::before{
+  content:'"';
+  position:absolute;top:-.5rem;right:1.2rem;
+  font-family:'Bebas Neue',sans-serif;
+  font-size:6rem;color:var(--red);
+  opacity:.1;line-height:1;
+  pointer-events:none;
+}
+.rev-card:hover{border-color:var(--red);transform:translateY(-4px);}
+.rev-top{display:flex;align-items:center;gap:.85rem;margin-bottom:1.1rem;}
+.rev-avatar{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--red);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:#fff;
+  flex-shrink:0;
+  box-shadow:0 3px 10px var(--red-glow);
+}
+.rev-name{font-size:.9rem;font-weight:700;color:var(--text);transition:color .35s;}
+.rev-branch{font-size:.72rem;color:var(--text3);margin-top:.1rem;transition:color .35s;}
+.rev-stars{color:var(--red);font-size:.85rem;letter-spacing:.06rem;margin-bottom:.75rem;}
+.rev-text{font-size:.84rem;color:var(--text2);line-height:1.72;transition:color .35s;}
+.rev-date{font-size:.7rem;color:var(--text3);margin-top:.9rem;transition:color .35s;}
+.google-badge{
+  display:inline-flex;align-items:center;gap:.45rem;
+  background:var(--bg3);border:1px solid var(--border2);
+  padding:.5rem 1rem;border-radius:20px;
+  font-size:.75rem;font-weight:600;color:var(--text2);
+  margin-top:2rem;
+  transition:background .35s,border-color .35s,color .35s;
+}
+.google-badge i{color:#4285f4;font-size:.9rem;}
+
+/* ═══════════════════════════════════════
+   RATING BAR
+═══════════════════════════════════════ */
+.rating-bar{
+  background:var(--red);
+  padding:2.25rem 1.5rem;text-align:center;
+  position:relative;overflow:hidden;
+}
+.rating-bar::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.07),transparent);animation:shimmer 3s 1.5s infinite;}
+.rating-inner{max-width:720px;margin:0 auto;}
+.r-stars{font-size:1.9rem;color:#fff;letter-spacing:.1rem;margin-bottom:.4rem;}
+.r-big{font-family:'Bebas Neue',sans-serif;font-size:4.5rem;color:#fff;line-height:1;letter-spacing:.04em;}
+.r-label{font-size:.9rem;color:rgba(255,255,255,.75);font-weight:600;margin-top:.35rem;}
+.r-branches{display:flex;justify-content:center;gap:3.5rem;margin-top:1.75rem;flex-wrap:wrap;}
+.r-b .r-b-num{font-family:'Bebas Neue',sans-serif;font-size:1.85rem;color:#fff;line-height:1;}
+.r-b .r-b-name{font-size:.7rem;color:rgba(255,255,255,.7);font-weight:700;text-transform:uppercase;letter-spacing:.09em;margin-top:.15rem;}
+
+/* ═══════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════ */
+.contact-sec{background:var(--bg2);border-top:1px solid var(--border);transition:background .35s,border-color .35s;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.75rem;align-items:start;}
+.contact-info{display:flex;flex-direction:column;gap:.75rem;}
+.cmap{width:100%;height:215px;border-radius:14px;overflow:hidden;border:1px solid var(--border);background:var(--bg3);margin-bottom:.1rem;transition:border-color .35s,background .35s;}
+.cmap iframe{width:100%;height:100%;border:none;}
+.ci-item{
+  display:flex;align-items:center;gap:.9rem;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:12px;padding:1rem 1.2rem;
+  transition:border-color .2s,transform .18s,background .35s;
+}
+.ci-item:hover{border-color:var(--red);transform:translateX(5px);}
+.ci-item i{font-size:1.2rem;color:var(--red);flex-shrink:0;}
+.ci-label{font-size:.72rem;color:var(--text3);transition:color .35s;}
+.ci-value{font-size:.91rem;font-weight:600;color:var(--text);transition:color .35s;}
+.wa-big-btn{
+  background:var(--red);color:#fff;font-weight:700;
+  border-radius:12px;padding:1.15rem 1.3rem;
+  display:flex;align-items:center;justify-content:center;gap:.6rem;
+  font-size:.97rem;
+  transition:background .15s,transform .15s,box-shadow .15s;
+  min-height:56px;
+  box-shadow:0 4px 20px var(--red-glow);
+}
+.wa-big-btn:hover{background:var(--red-h);transform:translateY(-2px);box-shadow:0 8px 28px var(--red-glow);}
+.cform{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:16px;padding:1.85rem;
+  transition:background .35s,border-color .35s;
+}
+.cform h3{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.06em;margin-bottom:1.3rem;text-transform:uppercase;color:var(--text);transition:color .35s;}
+.fg{margin-bottom:.95rem;}
+.fg label{font-size:.78rem;color:var(--text2);display:block;margin-bottom:.42rem;transition:color .35s;}
+.fg input,.fg textarea,.fg select{
+  width:100%;background:var(--bg3);
+  border:1px solid var(--border2);
+  color:var(--text);
+  padding:.8rem 1rem;border-radius:10px;
+  font-size:.9rem;font-family:'Inter',sans-serif;
+  outline:none;transition:border-color .18s,background .35s,color .35s;
+  min-height:50px;
+}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--red);}
+.fg textarea{resize:vertical;min-height:92px;}
+.fg select option{background:var(--bg3);}
+.form-sub{
+  width:100%;background:var(--red);color:#fff;font-weight:700;
+  padding:.9rem;border:none;border-radius:10px;
+  cursor:pointer;font-family:'Inter',sans-serif;font-size:.96rem;
+  transition:background .15s,transform .15s,box-shadow .15s;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;min-height:53px;
+  box-shadow:0 3px 14px var(--red-soft);
+}
+.form-sub:hover{background:var(--red-h);transform:translateY(-1px);box-shadow:0 6px 20px var(--red-glow);}
+
+/* ═══════════════════════════════════════
+   WA FLOAT
+═══════════════════════════════════════ */
+.wa-float{
+  position:fixed;bottom:1.6rem;right:1.6rem;z-index:600;
+  width:58px;height:58px;
+  background:var(--red);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 24px rgba(232,21,10,.5);
+  transition:transform .2s,background .2s,box-shadow .2s;
+}
+.wa-float:hover{transform:scale(1.1);background:var(--red-h);box-shadow:0 6px 32px rgba(232,21,10,.6);}
+.wa-float i{font-size:1.6rem;color:#fff;}
+.wa-float-pulse{
+  position:absolute;width:100%;height:100%;border-radius:50%;
+  border:2px solid var(--red);
+  animation:pulse-ring 2.5s ease-out infinite;
+}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:.7;}100%{transform:scale(1.65);opacity:0;}}
+
+/* ═══════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════ */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 1.5rem 0;transition:background .35s,border-color .35s;}
+.footer-inner{max-width:1160px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:1.65fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem;}
+.fbrand .fname{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;color:var(--red);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.4rem;}
+.fbrand p{font-size:.83rem;color:var(--text3);line-height:1.72;max-width:255px;margin-bottom:1rem;transition:color .35s;}
+.footer-social{display:flex;gap:.55rem;}
+.fsoc{
+  width:38px;height:38px;
+  background:var(--bg4);border:1px solid var(--border2);
+  border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  transition:border-color .15s,background .15s;
+}
+.fsoc:hover{border-color:var(--red);background:var(--red-soft);}
+.fsoc i{font-size:.97rem;color:var(--text2);transition:color .15s;}
+.fsoc:hover i{color:var(--red);}
+.footer-col h4{font-size:.73rem;color:var(--red);text-transform:uppercase;letter-spacing:.14em;font-weight:800;margin-bottom:.95rem;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.52rem;}
+.footer-col ul li a{font-size:.82rem;color:var(--text3);transition:color .15s;}
+.footer-col ul li a:hover{color:var(--red);}
+
+/* THEME SWITCHER */
+.theme-switcher{
+  background:var(--bg3);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:1.25rem 1.5rem;
+  margin-bottom:1.5rem;
+  transition:background .35s,border-color .35s;
+}
+.ts-label{font-size:.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:.15em;font-weight:700;margin-bottom:.85rem;transition:color .35s;}
+.ts-btns{display:flex;gap:.6rem;flex-wrap:wrap;}
+.ts-btn{
+  display:flex;align-items:center;gap:.5rem;
+  padding:.55rem 1rem;border-radius:9px;
+  font-size:.8rem;font-weight:700;cursor:pointer;
+  border:1.5px solid var(--border2);
+  background:var(--bg4);
+  color:var(--text2);
+  font-family:'Inter',sans-serif;
+  transition:all .2s;
+}
+.ts-btn:hover{border-color:var(--red);color:var(--red);}
+.ts-btn.active{border-color:var(--red);background:var(--red-soft);color:var(--red);}
+.ts-btn .ts-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.ts-dot-dark{background:linear-gradient(135deg,#2a2a2a,#0a0a0a);}
+.ts-dot-light{background:linear-gradient(135deg,#f0f0f0,#cccccc);border:1px solid #bbb;}
+.ts-dot-midnight{background:linear-gradient(135deg,#2a2555,#06040f);}
+
+.footer-bottom{border-top:1px solid var(--border);padding:1.25rem 0 1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;transition:border-color .35s;}
+.footer-bottom p{font-size:.76rem;color:var(--text3);transition:color .35s;}
+.footer-bottom span{color:var(--red);}
+
+/* ═══════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════ */
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-16px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
+@media(max-width:1024px){
+  .branches-grid{grid-template-columns:1fr 1fr;}
+  .reviews-grid{grid-template-columns:1fr 1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .stats-inner{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:860px){
+  .nav-links{display:none;}
+  .hmbg{display:flex;}
+  .about-grid,.ladies-grid,.contact-grid{grid-template-columns:1fr;}
+  .timings-grid{grid-template-columns:1fr;}
+  .classes-grid{grid-template-columns:1fr;}
+  .about-imgs{grid-template-rows:155px 155px;}
+  .ladies-img{height:280px;}
+  .reviews-header{flex-direction:column;align-items:flex-start;}
+}
+@media(max-width:640px){
+  .hero h1{font-size:clamp(3rem,16vw,5rem);}
+  .branches-grid{grid-template-columns:1fr;}
+  .reviews-grid{grid-template-columns:1fr;}
+  .stats-inner{grid-template-columns:repeat(2,1fr);}
+  .footer-top{grid-template-columns:1fr;}
+  .hero-btns{flex-direction:column;align-items:center;}
+  .r-branches{gap:1.75rem;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .price-grid{grid-template-columns:1fr;}
+  .lf-grid{grid-template-columns:1fr;}
+}
+@media(prefers-reduced-motion:reduce){
+  .marquee-track{animation:none;}
+  .hero-particles{display:none;}
+  .wa-float-pulse{animation:none;}
+  *{transition-duration:.01ms!important;animation-duration:.01ms!important;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" title="AA Fitness — Home">
+      <div class="logo-icon"><span>AA</span></div>
+      <div class="logo-text">
+        <div class="brand">AA Fitness Center</div>
+        <div class="tagline">6 Branches · Karachi</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#branches">Branches</a>
+      <a href="#services">Services</a>
+      <a href="#membership">Membership</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact" class="nav-cta">Join Now</a>
+    </div>
+    <button class="hmbg" id="hmbg" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <div class="mob-inner">
+    <a href="#about" onclick="closeMenu()"><i class="ti ti-info-circle"></i>About Us</a>
+    <a href="#branches" onclick="closeMenu()"><i class="ti ti-map-pin"></i>Our Branches</a>
+    <a href="#services" onclick="closeMenu()"><i class="ti ti-barbell"></i>Services</a>
+    <a href="#membership" onclick="closeMenu()"><i class="ti ti-credit-card"></i>Membership</a>
+    <a href="#reviews" onclick="closeMenu()"><i class="ti ti-star"></i>Reviews</a>
+    <a href="#contact" onclick="closeMenu()"><i class="ti ti-clock"></i>Timings & Contact</a>
+    <hr class="mob-divider"/>
+    <a href="https://wa.me/923112328599?text=Hi%20AA%20Fitness!%20I%20want%20to%20join." target="_blank" class="mob-cta-link"><i class="ti ti-brand-whatsapp"></i>Join Now on WhatsApp</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-accent-line"></div>
+  <div class="hero-particles" id="particles"></div>
+  <div class="hero-content">
+    <div class="hero-pill"><i class="ti ti-map-pin" style="font-size:.8rem;"></i>6 Branches Across Karachi</div>
+    <h1>
+      <span class="accent">Forge</span><br>
+      <span class="ghost">Your</span><br>
+      <span class="accent">Best</span><br>
+      Body.
+    </h1>
+    <p class="hero-sub">Karachi's most serious fitness center. Certified coaches, imported machines, and a community that pushes you past your limits — every single day.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/923112328599?text=Hi%20AA%20Fitness!%20I%20want%20to%20join." target="_blank" class="btn-red"><i class="ti ti-brand-whatsapp"></i>Start for Free — WhatsApp Us</a>
+      <a href="#branches" class="btn-ghost"><i class="ti ti-map-pin"></i>Find Your Branch</a>
+    </div>
+    <div class="hero-badges">
+      <span class="hbadge"><i class="ti ti-check"></i>Certified Trainers</span>
+      <span class="hbadge"><i class="ti ti-check"></i>Imported Equipment</span>
+      <span class="hbadge"><i class="ti ti-check"></i>Ladies Section</span>
+      <span class="hbadge"><i class="ti ti-check"></i>AC Facility</span>
+      <span class="hbadge"><i class="ti ti-check"></i>6 Days a Week</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div><div class="sb-num">6</div><div class="sb-lbl">Branches</div></div>
+    <div><div class="sb-num">5+</div><div class="sb-lbl">Years Running</div></div>
+    <div><div class="sb-num">1000+</div><div class="sb-lbl">Members Trained</div></div>
+    <div><div class="sb-num">10+</div><div class="sb-lbl">Expert Trainers</div></div>
+    <div><div class="sb-num">4.3★</div><div class="sb-lbl">Google Rating</div></div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Strength Training <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Fat Loss Programs <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Ladies Section <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Zumba Classes <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Personal Training <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Cardio Zone <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Yoga Training <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Calisthenics <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Nutrition Consulting <span class="m-dot">✦</span></span>
+    <span class="marquee-item">6 Branches Karachi <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Certified Trainers <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Imported Equipment <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Strength Training <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Fat Loss Programs <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Ladies Section <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Zumba Classes <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Personal Training <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Cardio Zone <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Yoga Training <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Calisthenics <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Nutrition Consulting <span class="m-dot">✦</span></span>
+    <span class="marquee-item">6 Branches Karachi <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Certified Trainers <span class="m-dot">✦</span></span>
+    <span class="marquee-item">Imported Equipment <span class="m-dot">✦</span></span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="about-sec">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-imgs">
+        <div class="aimg tall">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80&auto=format&fit=crop" alt="AA Fitness gym floor"/>
+        </div>
+        <div class="aimg">
+          <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80&auto=format&fit=crop" alt="Weight training"/>
+        </div>
+        <div class="aimg">
+          <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&q=80&auto=format&fit=crop" alt="Cardio zone"/>
+        </div>
+      </div>
+      <div class="about-body">
+        <div class="sec-eye">Who We Are</div>
+        <h2 class="sec-h">Not Just a Gym.<br><em>A Movement.</em></h2>
+        <div class="sec-rule"></div>
+        <p>AA Fitness Center is one of Karachi's most advanced and professional fitness clubs. Six active branches across the city, high-quality imported equipment, certified trainers, and an environment built for one thing — your transformation.</p>
+        <p>We built AA Fitness because Karachi deserved better. Whether your goal is to lose weight, build muscle, or improve endurance — our team will guide you every step of the way, from day one to podium.</p>
+        <div class="feat-list">
+          <div class="feat-item"><i class="ti ti-check"></i>High-quality imported gym equipment at all branches</div>
+          <div class="feat-item"><i class="ti ti-check"></i>Certified coaches with proven transformation results</div>
+          <div class="feat-item"><i class="ti ti-check"></i>Fully private ladies section — parda-friendly always</div>
+          <div class="feat-item"><i class="ti ti-check"></i>Air-conditioned, ventilated, clean facility</div>
+          <div class="feat-item"><i class="ti ti-check"></i>Nutrition consulting and personalised diet plans</div>
+          <div class="feat-item"><i class="ti ti-check"></i>Fat loss, muscle gain, and performance coaching</div>
+        </div>
+        <div class="red-callout">
+          <p>🔥 🔥 6 branches. 1 mission. Thousands of transformations across Karachi — and counting. Your turn starts today.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANCHES -->
+<section id="branches" class="branches-sec">
+  <div class="wrap">
+    <div class="sec-eye">Find Us Near You</div>
+    <h2 class="sec-h">6 Branches, <em>Zero Excuses.</em></h2>
+    <div class="sec-rule"></div>
+    <p class="sec-p">Six locations spread across Karachi. Same premium quality, same certified coaches, same results — no matter which branch you walk into. Your nearest one is never too far.</p>
+    <div class="branches-grid">
+
+      <div class="branch-card star">
+        <div class="branch-head featured">
+          <div class="branch-badge">★ Main Branch</div>
+          <div class="branch-num">Branch 01</div>
+          <div class="branch-name">Nazimabad (Main)</div>
+        </div>
+        <div class="branch-body">
+          <div class="b-row"><i class="ti ti-map-pin"></i><span>3rd Floor, Near Pizza Point, Faysal Bank Building, Block 3 Nazimabad, Karachi</span></div>
+          <div class="b-row"><i class="ti ti-phone"></i><span>0311-2328599</span></div>
+          <div class="b-row"><i class="ti ti-clock"></i><span>Morning 7AM–10AM &nbsp;·&nbsp; Evening 5PM–1AM</span></div>
+          <div class="b-row"><i class="ti ti-woman"></i><span>Ladies: 11AM–4PM (Private)</span></div>
+          <div class="b-stars"><span class="stars-ico">★★★★★</span><span class="star-num">4.4</span><span class="star-count">(53 Google reviews)</span></div>
+        </div>
+        <div class="branch-cta">
+          <a href="https://wa.me/923112328599?text=Hi!%20I%20want%20to%20join%20AA%20Fitness%20Nazimabad%20Main." target="_blank" class="bbtn bbtn-red"><i class="ti ti-brand-whatsapp"></i>WhatsApp</a>
+          <a href="tel:03112328599" class="bbtn bbtn-out"><i class="ti ti-phone"></i>Call</a>
+        </div>
+      </div>
+
+      <div class="branch-card">
+        <div class="branch-head">
+          <div class="branch-num">Branch 02</div>
+          <div class="branch-name">North Nazimabad</div>
+        </div>
+        <div class="branch-body">
+          <div class="b-row"><i class="ti ti-map-pin"></i><span>SC-13, Block H, North Nazimabad Town, Karachi</span></div>
+          <div class="b-row"><i class="ti ti-phone"></i><span>0311-2328599</span></div>
+          <div class="b-row"><i class="ti ti-clock"></i><span>Morning 6AM–10AM &nbsp;·&nbsp; Evening 4PM–12AM</span></div>
+          <div class="b-row"><i class="ti ti-woman"></i><span>Ladies: 10AM–3PM (Private)</span></div>
+          <div class="b-stars"><span class="stars-ico">★★★☆☆</span><span class="star-num">3.3</span><span class="star-count">(3 Google reviews)</span></div>
+        </div>
+        <div class="branch-cta">
+          <a href="https://wa.me/923112328599?text=Hi!%20I%20want%20to%20join%20AA%20Fitness%20North%20Nazimabad." target="_blank" class="bbtn bbtn-red"><i class="ti ti-brand-whatsapp"></i>WhatsApp</a>
+          <a href="tel:03112328599" class="bbtn bbtn-out"><i class="ti ti-phone"></i>Call</a>
+        </div>
+      </div>
+
+      <div class="branch-card">
+        <div class="branch-head">
+          <div class="branch-num">Branch 03</div>
+          <div class="branch-name">Gulberg (Samanabad)</div>
+        </div>
+        <div class="branch-body">
+          <div class="b-row"><i class="ti ti-map-pin"></i><span>C-51, Block 17, Gulberg Town, Karachi</span></div>
+          <div class="b-row"><i class="ti ti-phone"></i><span>0312-2807431</span></div>
+          <div class="b-row"><i class="ti ti-clock"></i><span>Morning 6AM–10AM &nbsp;·&nbsp; Evening 4PM–12AM</span></div>
+          <div class="b-row"><i class="ti ti-woman"></i><span>Ladies: Private & Co Timings</span></div>
+          <div class="b-stars"><span class="stars-ico">★★★★★</span><span class="star-num">4.6</span><span class="star-count">(17 Google reviews)</span></div>
+        </div>
+        <div class="branch-cta">
+          <a href="https://wa.me/923122807431?text=Hi!%20I%20want%20to%20join%20AA%20Fitness%20Gulberg." target="_blank" class="bbtn bbtn-red"><i class="ti ti-brand-whatsapp"></i>WhatsApp</a>
+          <a href="tel:03122807431" class="bbtn bbtn-out"><i class="ti ti-phone"></i>Call</a>
+        </div>
+      </div>
+
+      <div class="branch-card">
+        <div class="branch-head">
+          <div class="branch-num">Branch 04</div>
+          <div class="branch-name">Orangi Town</div>
+        </div>
+        <div class="branch-body">
+          <div class="b-row"><i class="ti ti-map-pin"></i><span>Orangi Town, Karachi</span></div>
+          <div class="b-row"><i class="ti ti-phone"></i><span>0311-2328599</span></div>
+          <div class="b-row"><i class="ti ti-clock"></i><span>Morning 6AM–10AM &nbsp;·&nbsp; Evening 4PM–12AM</span></div>
+          <div class="b-row"><i class="ti ti-woman"></i><span>Ladies Section Available</span></div>
+          <div class="b-stars"><span class="stars-ico">★★★★☆</span><span class="star-num">4.0</span><span class="star-count">Google Reviewed</span></div>
+        </div>
+        <div class="branch-cta">
+          <a href="https://wa.me/923112328599?text=Hi!%20I%20want%20to%20join%20AA%20Fitness%20Orangi%20Town." target="_blank" class="bbtn bbtn-red"><i class="ti ti-brand-whatsapp"></i>WhatsApp</a>
+          <a href="tel:03112328599" class="bbtn bbtn-out"><i class="ti ti-phone"></i>Call</a>
+        </div>
+      </div>
+
+      <div class="branch-card">
+        <div class="branch-head">
+          <div class="branch-num">Branch 05</div>
+          <div class="branch-name">Bahadurabad</div>
+        </div>
+        <div class="branch-body">
+          <div class="b-row"><i class="ti ti-map-pin"></i><span>Bahadurabad, Karachi</span></div>
+          <div class="b-row"><i class="ti ti-phone"></i><span>0311-2328599</span></div>
+          <div class="b-row"><i class="ti ti-clock"></i><span>Morning 6AM–10AM &nbsp;·&nbsp; Evening 4PM–12AM</span></div>
+          <div class="b-row"><i class="ti ti-woman"></i><span>Dedicated Ladies Section</span></div>
+          <div class="b-stars"><span class="stars-ico">★★★★☆</span><span class="star-num">4.2</span><span class="star-count">Google Reviewed</span></div>
+        </div>
+        <div class="branch-cta">
+          <a href="https://wa.me/923112328599?text=Hi!%20I%20want%20to%20join%20AA%20Fitness%20Bahadurabad." target="_blank" class="bbtn bbtn-red"><i class="ti ti-brand-whatsapp"></i>WhatsApp</a>
+          <a href="tel:03112328599" class="bbtn bbtn-out"><i class="ti ti-phone"></i>Call</a>
+        </div>
+      </div>
+
+      <div class="branch-card">
+        <div class="branch-head">
+          <div class="branch-num">Branch 06</div>
+          <div class="branch-name">Sher Shah</div>
+        </div>
+        <div class="branch-body">
+          <div class="b-row"><i class="ti ti-map-pin"></i><span>Sher Shah, Jinnah Road, Karachi</span></div>
+          <div class="b-row"><i class="ti ti-phone"></i><span>0311-2328599</span></div>
+          <div class="b-row"><i class="ti ti-clock"></i><span>Morning 6AM–10AM &nbsp;·&nbsp; Evening 4PM–12AM</span></div>
+          <div class="b-row"><i class="ti ti-woman"></i><span>Ladies Section Available</span></div>
+          <div class="b-stars"><span class="stars-ico">★★★★☆</span><span class="star-num">4.1</span><span class="star-count">Google Reviewed</span></div>
+        </div>
+        <div class="branch-cta">
+          <a href="https://wa.me/923112328599?text=Hi!%20I%20want%20to%20join%20AA%20Fitness%20Sher%20Shah." target="_blank" class="bbtn bbtn-red"><i class="ti ti-brand-whatsapp"></i>WhatsApp</a>
+          <a href="tel:03112328599" class="bbtn bbtn-out"><i class="ti ti-phone"></i>Call</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LADIES -->
+<section id="ladies" class="ladies-sec">
+  <div class="wrap">
+    <div class="ladies-grid">
+      <div>
+        <div class="sec-eye">For Our Sisters</div>
+        <h2 class="sec-h">Your Space.<br><em>Your Rules.</em></h2>
+        <div class="sec-rule"></div>
+        <p class="sec-p">At AA Fitness, every woman deserves to train with full comfort, full privacy, and zero judgment. Our dedicated ladies sections are fully enclosed, parda-friendly, and run by female trainers who get it.</p>
+        <div class="lf-grid">
+          <div class="lf-card"><i class="ti ti-lock"></i><div><h4>Private Entry</h4><p>Separate entrance, fully enclosed area at every branch.</p></div></div>
+          <div class="lf-card"><i class="ti ti-clock"></i><div><h4>Exclusive Timings</h4><p>Ladies-only hours — no overlap, no compromise.</p></div></div>
+          <div class="lf-card"><i class="ti ti-user-check"></i><div><h4>Female Trainers</h4><p>Certified female coaches available for personal training.</p></div></div>
+          <div class="lf-card"><i class="ti ti-heart"></i><div><h4>Full Equipment</h4><p>Complete strength and cardio setup inside ladies zone.</p></div></div>
+          <div class="lf-card"><i class="ti ti-music"></i><div><h4>Zumba & Yoga</h4><p>Fun group classes tailored specifically for women.</p></div></div>
+          <div class="lf-card"><i class="ti ti-shield-check"></i><div><h4>Parda-Friendly</h4><p>Train in full parda — no barriers, no awkwardness.</p></div></div>
+        </div>
+      </div>
+      <div class="ladies-img">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80&auto=format&fit=crop" alt="Ladies fitness section"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMINGS -->
+<section id="timings" class="timings-sec">
+  <div class="wrap">
+    <div class="sec-eye">We're Open When You Are</div>
+    <h2 class="sec-h">Branch <em>Timings</em></h2>
+    <div class="sec-rule"></div>
+    <p class="sec-p">Morning grind or midnight session — we've got you covered. Find the shift that fits your life.</p>
+    <div class="timings-grid">
+      <div class="timing-card">
+        <div class="timing-head"><i class="ti ti-map-pin"></i><h3>North Nazimabad</h3></div>
+        <div class="timing-slots">
+          <div class="tslot"><span class="type">Morning (Gents)</span><span class="time">6:00 AM – 10:00 AM</span></div>
+          <div class="tslot ladies-slot"><span class="type">Ladies Only</span><span class="time">10:00 AM – 3:00 PM</span></div>
+          <div class="tslot"><span class="type">Evening (Gents)</span><span class="time">4:00 PM – 12:00 AM</span></div>
+        </div>
+        <div class="timing-note">Mon – Sat &nbsp;·&nbsp; Closed Sunday</div>
+      </div>
+      <div class="timing-card">
+        <div class="timing-head"><i class="ti ti-map-pin"></i><h3>Nazimabad No. 3 — Main ★</h3></div>
+        <div class="timing-slots">
+          <div class="tslot"><span class="type">Morning (Gents)</span><span class="time">7:00 AM – 10:00 AM</span></div>
+          <div class="tslot ladies-slot"><span class="type">Ladies Only</span><span class="time">11:00 AM – 4:00 PM</span></div>
+          <div class="tslot"><span class="type">Evening (Gents)</span><span class="time">5:00 PM – 1:00 AM</span></div>
+        </div>
+        <div class="timing-note">Mon – Sat &nbsp;·&nbsp; Closed Sunday</div>
+      </div>
+      <div class="timing-card">
+        <div class="timing-head"><i class="ti ti-map-pin"></i><h3>Samanabad (Gulberg)</h3></div>
+        <div class="timing-slots">
+          <div class="tslot"><span class="type">Morning (Gents)</span><span class="time">6:00 AM – 10:00 AM</span></div>
+          <div class="tslot ladies-slot"><span class="type">Ladies (Private)</span><span class="time">10:00 AM – 2:00 PM</span></div>
+          <div class="tslot ladies-slot"><span class="type">Ladies (Co)</span><span class="time">2:00 PM – 4:00 PM</span></div>
+          <div class="tslot"><span class="type">Evening (Gents)</span><span class="time">4:00 PM – 12:00 AM</span></div>
+        </div>
+        <div class="timing-note">Mon – Sat &nbsp;·&nbsp; Closed Sunday</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services-sec">
+  <div class="wrap">
+    <div class="sec-eye">Everything You Need</div>
+    <h2 class="sec-h">Services That <em>Deliver</em></h2>
+    <div class="sec-rule"></div>
+    <div class="srv-grid">
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-barbell"></i></div><h3>Strength Training</h3><p>Power racks, barbells, dumbbells — a serious lifting floor for serious lifters.</p></div>
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-run"></i></div><h3>Cardio Zone</h3><p>Premium treadmills, bikes, ellipticals — burn it all off right here.</p></div>
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-flame"></i></div><h3>Fat Loss Programs</h3><p>Structured diet + training plans built around your body — not someone else's.</p></div>
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-user-star"></i></div><h3>Personal Training</h3><p>Your coach, your plan, your pace. One-on-one sessions that get results.</p></div>
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-music"></i></div><h3>Zumba Classes</h3><p>High-energy dance fitness — feel the music, torch the calories.</p></div>
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-yoga"></i></div><h3>Yoga Training</h3><p>Flexibility, recovery, and mental clarity — all in one session.</p></div>
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-body-scan"></i></div><h3>Bodybuilding</h3><p>Elite-level coaching for competitors — peak week, posing, and beyond.</p></div>
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-apple"></i></div><h3>Nutrition Consulting</h3><p>Custom meal plans from certified nutrition experts to fuel your transformation.</p></div>
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-activity"></i></div><h3>Calisthenics</h3><p>Bodyweight mastery — pull-ups, handstands, rings, and functional movement.</p></div>
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-users"></i></div><h3>Group Classes</h3><p>Kickboxing, HIIT, aerobics — sweat harder when you train together.</p></div>
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-arrows-cross"></i></div><h3>Functional Training</h3><p>CrossFit-style functional zone — build real-world strength and athleticism.</p></div>
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-door"></i></div><h3>Locker & Shower</h3><p>Clean, secure locker rooms and shower facilities at all branches.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERSHIP -->
+<section id="membership" class="membership-sec">
+  <div class="wrap">
+    <div class="sec-eye">Invest in Yourself</div>
+    <h2 class="sec-h">Membership <em>Plans</em></h2>
+    <div class="sec-rule"></div>
+    <p class="sec-p">Flexible plans designed for every goal and every budget. No fluff — just real training, real results.</p>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-name">Basic Membership</div>
+        <div class="price-amt">Rs. 4,000 <span>/ month</span></div>
+        <div class="price-desc">The perfect entry point — full access to the gym floor with trainer guidance.</div>
+        <ul class="price-feats">
+          <li><i class="ti ti-check"></i>Full Gym Floor Access</li>
+          <li><i class="ti ti-check"></i>Cardio Zone</li>
+          <li><i class="ti ti-check"></i>Locker Facility</li>
+          <li><i class="ti ti-check"></i>Trainer Guidance</li>
+        </ul>
+        <a href="https://wa.me/923112328599?text=Hi!%20Interested%20in%20Basic%20Membership." target="_blank" class="pbtn pbtn-out">Inquire on WhatsApp</a>
+      </div>
+      <div class="price-card hot">
+        <div class="price-name">Fat Loss Package</div>
+        <div class="price-amt">Rs. 7,000 <span>/ month</span></div>
+        <div class="price-desc">Our most popular plan — structured fat loss with a custom diet plan and supervised sessions.</div>
+        <ul class="price-feats">
+          <li><i class="ti ti-check"></i>Custom Diet Plan</li>
+          <li><i class="ti ti-check"></i>4 Trainer Sessions/Week</li>
+          <li><i class="ti ti-check"></i>Body Composition Tracking</li>
+          <li><i class="ti ti-check"></i>Full Gym Access</li>
+        </ul>
+        <a href="https://wa.me/923112328599?text=Hi!%20Interested%20in%20Fat%20Loss%20Package." target="_blank" class="pbtn pbtn-fill">Inquire on WhatsApp</a>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Ladies Membership</div>
+        <div class="price-amt">Rs. 3,500 <span>/ month</span></div>
+        <div class="price-desc">Exclusive ladies-only access — private timings, female trainer, parda-friendly throughout.</div>
+        <ul class="price-feats">
+          <li><i class="ti ti-check"></i>Private Ladies Section</li>
+          <li><i class="ti ti-check"></i>Female Trainer Available</li>
+          <li><i class="ti ti-check"></i>Zumba & Yoga Included</li>
+          <li><i class="ti ti-check"></i>Parda-Friendly</li>
+        </ul>
+        <a href="https://wa.me/923112328599?text=Hi!%20Interested%20in%20Ladies%20Membership." target="_blank" class="pbtn pbtn-out">Inquire on WhatsApp</a>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Personal Training</div>
+        <div class="price-amt">Rs. 15,000 <span>/ month</span></div>
+        <div class="price-desc">One trainer. One mission. Daily dedicated sessions built entirely around you.</div>
+        <ul class="price-feats">
+          <li><i class="ti ti-check"></i>1-on-1 Daily Sessions</li>
+          <li><i class="ti ti-check"></i>Custom Workout Plan</li>
+          <li><i class="ti ti-check"></i>Diet & Nutrition Plan</li>
+          <li><i class="ti ti-check"></i>Weekly Progress Tracking</li>
+        </ul>
+        <a href="https://wa.me/923112328599?text=Hi!%20Interested%20in%20Personal%20Training." target="_blank" class="pbtn pbtn-out">Inquire on WhatsApp</a>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Complete Package</div>
+        <div class="price-amt">Rs. 9,000 <span>/ month</span></div>
+        <div class="price-desc">All-in-one — gym, classes, nutrition coaching, and trainer supervision. Best value.</div>
+        <ul class="price-feats">
+          <li><i class="ti ti-check"></i>Full Gym + All Classes</li>
+          <li><i class="ti ti-check"></i>Diet Plan Included</li>
+          <li><i class="ti ti-check"></i>Trainer Supervised</li>
+          <li><i class="ti ti-check"></i>Best Value Plan</li>
+        </ul>
+        <a href="https://wa.me/923112328599?text=Hi!%20Interested%20in%20Complete%20Package." target="_blank" class="pbtn pbtn-out">Inquire on WhatsApp</a>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Day Pass</div>
+        <div class="price-amt">Rs. 800 <span>/ session</span></div>
+        <div class="price-desc">Try us before you commit. Full facility access — no membership needed.</div>
+        <ul class="price-feats">
+          <li><i class="ti ti-check"></i>Single Day Full Access</li>
+          <li><i class="ti ti-check"></i>All Zones Included</li>
+          <li><i class="ti ti-check"></i>No Commitment</li>
+        </ul>
+        <a href="https://wa.me/923112328599?text=Hi!%20I%27d%20like%20a%20Day%20Pass." target="_blank" class="pbtn pbtn-out">Inquire on WhatsApp</a>
+      </div>
+    </div>
+    <div class="reg-note">
+      <p>One-time <strong>Registration Fee: Rs. 2,000</strong> on all membership plans &nbsp;·&nbsp; <strong>Fee is non-refundable</strong> &nbsp;·&nbsp; Also available: <strong>Quarterly &amp; Yearly Packages</strong> · <strong>Student Discounts</strong> · <strong>Couple Memberships</strong> — WhatsApp us for details</p>
+    </div>
+  </div>
+</section>
+
+<!-- CLASSES -->
+<section id="classes" class="classes-sec">
+  <div class="wrap">
+    <div class="sec-eye">Group Classes</div>
+    <h2 class="sec-h">Train Together, <em>Win Together</em></h2>
+    <div class="sec-rule"></div>
+    <p class="sec-p">Energy hits different in a group. Professionally structured classes that keep you accountable — and addicted.</p>
+    <div class="classes-grid">
+      <div class="class-card">
+        <div class="class-head l"><i class="ti ti-woman"></i><h3>Ladies Classes</h3></div>
+        <div class="class-slots">
+          <div class="cslot"><i class="ti ti-music"></i><span>Zumba Dance Fitness</span></div>
+          <div class="cslot"><i class="ti ti-yoga"></i><span>Yoga & Flexibility</span></div>
+          <div class="cslot"><i class="ti ti-flame"></i><span>Fat Burn Aerobics</span></div>
+          <div class="cslot"><i class="ti ti-clock"></i><span>During Ladies Timings Only</span></div>
+        </div>
+        <div class="class-note">Exclusively for female members. Parda-friendly, private, and comfortable.</div>
+      </div>
+      <div class="class-card">
+        <div class="class-head"><i class="ti ti-users"></i><h3>General Classes</h3></div>
+        <div class="class-slots">
+          <div class="cslot"><i class="ti ti-run"></i><span>High Intensity Training (HIIT)</span></div>
+          <div class="cslot"><i class="ti ti-shield"></i><span>Kickboxing</span></div>
+          <div class="cslot"><i class="ti ti-activity"></i><span>Calisthenics / Bodyweight</span></div>
+          <div class="cslot"><i class="ti ti-clock"></i><span>Evening Sessions Available</span></div>
+        </div>
+        <div class="class-note">Open to all members. WhatsApp your branch for the updated timetable.</div>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem;padding:1rem 1.3rem;background:var(--red-softer);border:1px solid rgba(232,21,10,.22);border-radius:12px;display:flex;align-items:center;gap:.85rem;transition:background .35s;">
+      <i class="ti ti-info-circle" style="color:var(--red);font-size:1.2rem;flex-shrink:0;"></i>
+      <p style="font-size:.85rem;color:var(--text2);line-height:1.65;transition:color .35s;">Schedules vary by branch. WhatsApp us to get your branch's latest timetable and reserve your spot before it fills up.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINERS -->
+<section id="trainers" style="background:var(--bg);border-top:1px solid var(--border);transition:background .35s,border-color .35s;">
+  <div class="wrap">
+    <div class="sec-eye">The People Behind Your Results</div>
+    <h2 class="sec-h">Our <em>Expert Trainers</em></h2>
+    <div class="sec-rule"></div>
+    <p class="sec-p">Every AA Fitness trainer is certified, experienced, and 100% invested in your transformation. No generic plans — just real coaching built around you.</p>
+    <div class="srv-grid" style="margin-top:2rem;">
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-flame"></i></div><h3>Weight Loss & Body Shaping</h3><p>Specialists in fat loss, body recomposition, and sculpting the physique you've always wanted.</p></div>
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-barbell"></i></div><h3>Muscle Building & Strength</h3><p>Progressive overload programs for serious mass and strength gains — beginner to advanced.</p></div>
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-run"></i></div><h3>Functional & Endurance</h3><p>Athletic conditioning, stamina building, and functional movement for peak performance.</p></div>
+      <div class="srv-card"><div class="srv-ic"><i class="ti ti-apple"></i></div><h3>Diet Planning & Nutrition</h3><p>Personalised meal plans designed by certified nutrition coaches to fuel your exact goals.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:4rem 0;transition:background .35s,border-color .35s;">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div class="sec-eye" style="text-align:center;">Why 1000+ Members Choose Us</div>
+      <h2 class="sec-h" style="text-align:center;">Why <em>AA Fitness?</em></h2>
+      <div class="sec-rule" style="margin:1rem auto 0;"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.1rem;">
+      <div class="srv-card" style="text-align:center;padding:1.75rem 1.25rem;">
+        <div class="srv-ic" style="margin:0 auto 1rem;"><i class="ti ti-building"></i></div>
+        <h3>Modern Facilities</h3>
+        <p>Hygienic, air-conditioned gyms with premium imported equipment at every branch.</p>
+      </div>
+      <div class="srv-card" style="text-align:center;padding:1.75rem 1.25rem;">
+        <div class="srv-ic" style="margin:0 auto 1rem;"><i class="ti ti-user-star"></i></div>
+        <h3>Expert Trainers</h3>
+        <p>Certified coaches who create personalised plans — not cookie-cutter programs.</p>
+      </div>
+      <div class="srv-card" style="text-align:center;padding:1.75rem 1.25rem;">
+        <div class="srv-ic" style="margin:0 auto 1rem;"><i class="ti ti-currency-rupee"></i></div>
+        <h3>Affordable Pricing</h3>
+        <p>Premium fitness shouldn't cost a fortune. Our plans are built to fit every budget.</p>
+      </div>
+      <div class="srv-card" style="text-align:center;padding:1.75rem 1.25rem;">
+        <div class="srv-ic" style="margin:0 auto 1rem;"><i class="ti ti-map-pin"></i></div>
+        <h3>6 Branches</h3>
+        <p>Spread across Karachi — so there's always an AA Fitness branch near you.</p>
+      </div>
+      <div class="srv-card" style="text-align:center;padding:1.75rem 1.25rem;">
+        <div class="srv-ic" style="margin:0 auto 1rem;"><i class="ti ti-heart"></i></div>
+        <h3>Friendly Environment</h3>
+        <p>Welcoming, supportive community that motivates you to keep showing up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews-sec">
+  <div class="wrap">
+    <div class="reviews-header">
+      <div>
+        <div class="sec-eye">What Members Say</div>
+        <h2 class="sec-h">Real People, <em>Real Results</em></h2>
+        <div class="sec-rule"></div>
+      </div>
+      <div class="overall-rating">
+        <div class="or-num">4.3</div>
+        <div class="or-right">
+          <div class="or-stars">★★★★★</div>
+          <div class="or-label">Average Google Rating</div>
+          <div class="or-branches">Across all 3 branches in Karachi</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="rev-card">
+        <div class="rev-top">
+          <div class="rev-avatar">AK</div>
+          <div>
+            <div class="rev-name">Ahmed Khan</div>
+            <div class="rev-branch">Nazimabad No. 3 Branch</div>
+          </div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">Lost 14kg in 3 months with AA Fitness. The trainer gave me a proper diet plan and never let me slack. Equipment is top quality — way better than gyms charging double the price.</p>
+        <div class="rev-date">2 months ago · Google Review</div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-top">
+          <div class="rev-avatar" style="background:#b01008;">SA</div>
+          <div>
+            <div class="rev-name">Sana Abbasi</div>
+            <div class="rev-branch">Samanabad Branch</div>
+          </div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">As a woman, finding a gym I feel comfortable in was hard. AA Fitness ladies section is fully private, parda-friendly, and the female trainer is amazing. Best decision I made.</p>
+        <div class="rev-date">1 month ago · Google Review</div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-top">
+          <div class="rev-avatar" style="background:#8b0000;">MR</div>
+          <div>
+            <div class="rev-name">Muhammad Raza</div>
+            <div class="rev-branch">Nazimabad No. 3 Branch</div>
+          </div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">Been training here for 2 years. The trainers are experienced and actually push you. Gained 8kg of solid muscle. The evening timings are perfect — comes alive after 8PM.</p>
+        <div class="rev-date">3 months ago · Google Review</div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-top">
+          <div class="rev-avatar" style="background:#c01008;">FN</div>
+          <div>
+            <div class="rev-name">Faisal Noor</div>
+            <div class="rev-branch">Samanabad Branch</div>
+          </div>
+        </div>
+        <div class="rev-stars">★★★★☆</div>
+        <p class="rev-text">Great gym, affordable prices, and the trainer is very professional. Machines are imported and well-maintained. The AC keeps it comfortable even in Karachi heat.</p>
+        <div class="rev-date">5 months ago · Google Review</div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-top">
+          <div class="rev-avatar" style="background:#a01006;">ZH</div>
+          <div>
+            <div class="rev-name">Zara Hussain</div>
+            <div class="rev-branch">North Nazimabad Branch</div>
+          </div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">Joined for Zumba and ended up doing strength training too! The ladies area is super clean, private, and the trainer designs the plan around your schedule. Highly recommend.</p>
+        <div class="rev-date">6 months ago · Google Review</div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-top">
+          <div class="rev-avatar" style="background:#d01209;">OM</div>
+          <div>
+            <div class="rev-name">Omar Malik</div>
+            <div class="rev-branch">Nazimabad No. 3 Branch</div>
+          </div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">Started as a complete beginner. The coaches broke everything down from day one — form, diet, rest. 4 months in and people are noticing. Worth every rupee and more.</p>
+        <div class="rev-date">4 months ago · Google Review</div>
+      </div>
+
+    </div>
+    <div style="margin-top:2rem;">
+      <a href="https://www.google.com/maps/search/AA+Fitness+Karachi" target="_blank" class="google-badge"><i class="ti ti-brand-google"></i>View all reviews on Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- RATING BAR -->
+<div class="rating-bar">
+  <div class="rating-inner">
+    <div class="r-stars">★★★★★</div>
+    <div class="r-big">4.3</div>
+    <div class="r-label">Average Google Rating · 6 Branches Across Karachi</div>
+    <div class="r-branches">
+      <div class="r-b"><div class="r-b-num">3.3 ★</div><div class="r-b-name">North Nazimabad</div></div>
+      <div class="r-b"><div class="r-b-num">4.4 ★</div><div class="r-b-name">Nazimabad No. 3</div></div>
+      <div class="r-b"><div class="r-b-num">4.6 ★</div><div class="r-b-name">Samanabad</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-sec">
+  <div class="wrap">
+    <div class="sec-eye">Let's Talk</div>
+    <h2 class="sec-h">Start Your <em>Journey Today</em></h2>
+    <div class="sec-rule"></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="cmap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.4!2d67.0524707!2d24.9387998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f61ef8374e1:0xbd55fa4fdc9a3ab6!2sAA%20Fitness%20Center!5e0!3m2!1sen!2spk!4v1700000000000!5m2!1sen!2spk" allowfullscreen="" loading="lazy" title="AA Fitness Location"></iframe>
+        </div>
+        <div class="ci-item"><i class="ti ti-map-pin"></i><div><div class="ci-label">Main Branch</div><div class="ci-value">3rd Floor, Near Pizza Point, Block 3 Nazimabad, Karachi</div></div></div>
+        <a href="tel:0311-2328599" class="ci-item"><i class="ti ti-phone"></i><div><div class="ci-label">North Nazimabad & Nazimabad No. 3</div><div class="ci-value">0311-2328599</div></div></a>
+        <a href="tel:03122807431" class="ci-item"><i class="ti ti-phone"></i><div><div class="ci-label">Samanabad Branch</div><div class="ci-value">0312-2807431</div></div></a>
+        <a href="https://www.instagram.com/aafitnessreal/" target="_blank" class="ci-item"><i class="ti ti-brand-instagram"></i><div><div class="ci-label">Instagram</div><div class="ci-value">@aafitnessreal</div></div></a>
+        <a href="https://www.facebook.com/Akmalalifitness" target="_blank" class="ci-item"><i class="ti ti-brand-facebook"></i><div><div class="ci-label">Facebook</div><div class="ci-value">@Akmalalifitness</div></div></a>
+        <a href="https://www.aafitness.tech" target="_blank" class="ci-item"><i class="ti ti-world"></i><div><div class="ci-label">Website</div><div class="ci-value">www.aafitness.tech</div></div></a>
+        <a href="https://wa.me/923112328599?text=Hi%20AA%20Fitness!%20I%20want%20to%20join." target="_blank" class="wa-big-btn"><i class="ti ti-brand-whatsapp"></i>Chat on WhatsApp Now</a>
+      </div>
+      <div class="cform">
+        <h3>Send a Message</h3>
+        <div class="fg"><label>Your Name</label><input type="text" id="fn" placeholder="e.g. Ahmed Khan"/></div>
+        <div class="fg"><label>Phone Number</label><input type="tel" id="fp" placeholder="e.g. 0300-1234567"/></div>
+        <div class="fg"><label>Select Branch</label>
+          <select id="fb">
+            <option>Nazimabad — Main Branch</option>
+            <option>North Nazimabad Branch</option>
+            <option>Gulberg (Samanabad) Branch</option>
+            <option>Orangi Town Branch</option>
+            <option>Bahadurabad Branch</option>
+            <option>Sher Shah Branch</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="fg"><label>I'm Interested In</label>
+          <select id="fs">
+            <option>Basic Membership — Rs. 4,000/month</option>
+            <option>Fat Loss Package — Rs. 7,000/month</option>
+            <option>Ladies Membership — Rs. 3,500/month</option>
+            <option>Complete Package — Rs. 9,000/month</option>
+            <option>Personal Training — Rs. 15,000/month</option>
+            <option>Day Pass — Rs. 800</option>
+            <option>Just looking around</option>
+          </select>
+        </div>
+        <div class="fg"><label>Message (Optional)</label><textarea id="fm" placeholder="Tell us your fitness goals..."></textarea></div>
+        <button class="form-sub" onclick="sendWA()"><i class="ti ti-brand-whatsapp"></i>Send via WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="fbrand">
+        <div class="fname">AA Fitness Center</div>
+        <p>Karachi's most advanced fitness club. 6 branches across the city — Nazimabad, North Nazimabad, Gulberg, Orangi Town, Bahadurabad & Sher Shah.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/aafitnessreal/" target="_blank" class="fsoc" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+          <a href="https://www.facebook.com/Akmalalifitness" target="_blank" class="fsoc" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
+          <a href="https://wa.me/923112328599" target="_blank" class="fsoc" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#branches">Our Branches</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#classes">Classes</a></li>
+          <li><a href="#trainers">Our Trainers</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Branches</h4>
+        <ul>
+          <li><a href="#branches">Nazimabad (Main)</a></li>
+          <li><a href="#branches">North Nazimabad</a></li>
+          <li><a href="#branches">Gulberg (Samanabad)</a></li>
+          <li><a href="#branches">Orangi Town</a></li>
+          <li><a href="#branches">Bahadurabad</a></li>
+          <li><a href="#branches">Sher Shah</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:0311-2328599">0311-2328599</a></li>
+          <li><a href="tel:03122807431">0312-2807431</a></li>
+          <li><a href="https://www.instagram.com/aafitnessreal/" target="_blank">@aafitnessreal</a></li>
+          <li><a href="#">Mon – Sat · 6AM – 1AM</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- THEME SWITCHER -->
+    <div class="theme-switcher">
+      <div class="ts-label">Choose Your Theme</div>
+      <div class="ts-btns">
+        <button class="ts-btn active" id="ts-dark" onclick="setTheme('dark')">
+          <span class="ts-dot ts-dot-dark"></span>Dark Mode
+        </button>
+        <button class="ts-btn" id="ts-light" onclick="setTheme('light')">
+          <span class="ts-dot ts-dot-light"></span>Light Mode
+        </button>
+        <button class="ts-btn" id="ts-midnight" onclick="setTheme('midnight')">
+          <span class="ts-dot ts-dot-midnight"></span>Midnight
+        </button>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 AA Fitness Center &nbsp;·&nbsp; All Rights Reserved &nbsp;·&nbsp; Karachi, Pakistan</p>
+      <p>Train Hard. <span>Transform Faster.</span></p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WA -->
+<a href="https://wa.me/923112328599?text=Hi%20AA%20Fitness!%20I%20want%20to%20join." target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+  <div class="wa-float-pulse"></div>
+  <i class="ti ti-brand-whatsapp"></i>
+</a>
+
+<script>
+/* ── MENU ── */
+function toggleMenu(){
+  var m=document.getElementById('mobMenu');
+  var h=document.getElementById('hmbg');
+  var o=m.classList.toggle('open');
+  h.classList.toggle('open',o);
+  document.body.style.overflow=o?'hidden':'';
+}
+function closeMenu(){
+  document.getElementById('mobMenu').classList.remove('open');
+  document.getElementById('hmbg').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t){e.preventDefault();closeMenu();setTimeout(function(){t.scrollIntoView({behavior:'smooth'});},80);}
+  });
+});
+
+/* ── THEME ── */
+function setTheme(t){
+  document.documentElement.setAttribute('data-theme',t);
+  ['dark','light','midnight'].forEach(function(k){
+    document.getElementById('ts-'+k).classList.toggle('active',k===t);
+  });
+  try{localStorage.setItem('aaf-theme',t);}catch(e){}
+}
+(function(){
+  try{var s=localStorage.getItem('aaf-theme');if(s)setTheme(s);}catch(e){}
+})();
+
+/* ── WA FORM ── */
+function sendWA(){
+  var n=document.getElementById('fn').value||'Not given';
+  var p=document.getElementById('fp').value||'Not given';
+  var b=document.getElementById('fb').value;
+  var s=document.getElementById('fs').value;
+  var m=document.getElementById('fm').value||'';
+  var phone=b.includes('Gulberg')||b.includes('Samanabad')?'923122807431':'923112328599';
+  var txt='Hi AA Fitness!\n\nName: '+n+'\nPhone: '+p+'\nBranch: '+b+'\nInterested In: '+s+(m?'\nMessage: '+m:'');
+  window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(txt),'_blank');
+}
+
+/* ── HERO PARTICLES ── */
+(function(){
+  var c=document.getElementById('particles');
+  if(!c)return;
+  for(var i=0;i<18;i++){
+    var d=document.createElement('div');
+    d.className='particle';
+    d.style.left=Math.random()*100+'%';
+    d.style.animationDelay=Math.random()*12+'s';
+    d.style.animationDuration=(10+Math.random()*14)+'s';
+    d.style.width=d.style.height=(1+Math.random()*2)+'px';
+    c.appendChild(d);
+  }
+})();
+</script>
+</body>
+</html>
